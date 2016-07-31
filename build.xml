@@ -1,0 +1,17 @@
+<project name="snapdeal" default="package" basedir="." >
+
+    <target name="compilation">
+        <mkdir dir="classes"/>
+        <javac srcdir="src" destdir="classes"/>
+    </target>
+
+    <target name="package" depends="compilation">
+        <jar basedir="classes" destfile="snapdeal.jar" />
+    </target>
+    
+    <target name="clean">
+        <delete dir="classes"/>       
+        <delete file="snapdeal.jar"/>
+    </target>
+    
+</project>  
